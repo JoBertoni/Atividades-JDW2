@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+.body {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(90deg,  rgb(216, 89, 16), rgb(255, 233, 40),rgb(216, 89, 16)) ;
+    background-size:500% 500%;
+    animation: colors 2s;
+    background-position: right;
+}
+.display{
+    background-color: rgba(255, 255, 255, 0);
+    height: 65px;
+}
+.main{
+    color: white;
+    height: auto;
+    width: 270px;
+    padding: 20px;
+        border-radius: 15px;
+        border-color: rgba(255, 255, 255, 0.83);
+        border-style: solid;
+    text-align: center;
+    margin: auto;
+    animation: colors 10s;
+    background-size: 500% 500%;
+    position: relative;
+    animation-name: corpo;
+    animation-duration: 2s;  
+    animation-fill-mode: backwards;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+.btn{
+    height:auto;
+    width:40px;
+    background-color: rgba(255, 255, 255, 0);
+    animation: colors 10s;  
+    position: relative;
+    animation-name: botoes;
+    animation-duration: 2s;  
+    animation-fill-mode: backwards;
+    border-color: rgba(255, 255, 255, 0.83);
+}
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.233);
+    border: rgba(255, 255, 255, 0.233);
+}
+.btn:visited { 
+    color: #FFF; 
+    border: white;
+}
+
+/*Animações*/
+@keyframes colors {
+    0%{
+        background-position: 0% 33%;
+    }
+    150%{
+        background-position: 66% 100%;
+    }
+}
+@keyframes corpo {
+    0% {
+        height: 25%;
+        right: 800px;
+        transform: rotate(180deg);
+    }
+    100% {
+        height: 100%;
+        right: 0px;
+    }
+}
+@keyframes botoes {
+    0% {
+        top: 500px;
+    }
+    100% {
+        top: 0px;
+    }
+}
